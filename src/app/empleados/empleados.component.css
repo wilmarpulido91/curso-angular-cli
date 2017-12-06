@@ -1,0 +1,25 @@
+h1 {
+  color: green;
+  font-size: 3em;
+  font-weight: bold;
+  text-align: center;
+}
+th,td {
+  text-align: center;
+}
+td:nth-child(6){
+  color: #fff;
+  font-weight: bold;
+}
+.FondoVerde {
+  background-color: green;
+}
+.FondoRojo {
+  background-color: red;
+}
+.BordeRadio {
+  border-radius: 20px;
+}
+.letraGrande {
+  font-size: 20px;
+}

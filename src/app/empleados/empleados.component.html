@@ -1,0 +1,90 @@
+<h1>{{titulo_component}}</h1>
+
+<table width=100% border="1" bordercolor="#999" cellspacing="0" cellpadding="10">
+  <tr>
+    <th>id</th>
+    <th>Nombre</th>
+    <th>Edad</th>
+    <th>Cargo</th>
+    <th>Estado civil</th>
+    <th>¿Contrato fijo?</th>
+  </tr>
+  <tr *ngFor="let empleado of empleados; let i = index">
+    <td>{{i+1}}</td>
+    <td>{{empleado.nombre}}</td>
+    <td>{{empleado.edad}}</td>
+    <td>{{empleado.cargo}}</td>
+    <td>{{empleado.estadoCivil}}</td>
+    <td *ngIf="empleado.contratado == true" [ngClass]="{
+      FondoVerde: empleado.contratado == true,
+      FondoRojo: empleado.contratado == false
+    }">Si</td>
+    <td *ngIf="empleado.contratado == false" [ngClass]="{
+      FondoVerde: empleado.contratado == true,
+      FondoRojo: empleado.contratado == false
+    }">No</td>
+  </tr>
+</table>
+<br>
+
+<button (click)="cambiarTipoContrato()" type="button" name="button">Cambiar Contrato</button>
+
+<hr>
+
+<h3>Mostrar el color con un Siwtch HTML</h3>
+
+<div [ngSwitch]="color">
+  <p *ngSwitchCase="'red'" [ngStyle]="{
+    'background-color':color,
+    'color':'white',
+    'padding': '10px'
+  }">Color {{color}}</p>
+  <p *ngSwitchCase="'blue'" [ngStyle]="{
+    'background-color':color,
+    'color':'white',
+    'padding': '10px'
+  }">Color {{color}}</p>
+  <p *ngSwitchCase="'green'" [ngStyle]="{
+    'background-color':color,
+    'color':'white',
+    'padding': '10px'
+  }">Color {{color}}</p>
+  <p *ngSwitchCase="''" [ngStyle]="{
+    'background-color':'#fff',
+    'color':'black',
+    'padding': '10px'
+  }">Color {{color}}</p>
+</div>
+
+<button (click)="cambiarColorRojo()" type="button" name="button">Cambia a rojo</button>
+<button (click)="cambiarColorAzul()" type="button" name="button">Cambia a azul</button>
+<button (click)="cambiarColorVerde()" type="button" name="button">Cambia a verde</button>
+
+<hr>
+
+<h3>Traer el color del ejercicio anterior</h3>
+
+<div>
+  <p [ngStyle]="{
+    'background-color':color2,
+    'color':'white',
+    'padding': '10px'
+  }">Color {{color2}}</p>
+</div>
+
+<button (click)="cambiarColor()" type="button" name="button">Obten color</button>
+
+<hr>
+
+<h3>Ingrese un color...</h3>
+<input type="text" [(ngModel)]="color_select">
+<button type="button" name="button" (click)="consoleColor()">capturar color</button>
+<pre [ngClass]="{
+  letraGrande: 1 == 1
+}"><strong>Color seleccionado: </strong>{{color_select}}</pre>
+<div [ngStyle]="{
+  'background-color':color_select,
+  'width':'200px',
+  'height':'200px',
+  'margin-top':'10px'
+}" [style.border]="color_select != '' ? 'none' : '1px solid #000'" [class.BordeRadio]="color_select != ''"></div>

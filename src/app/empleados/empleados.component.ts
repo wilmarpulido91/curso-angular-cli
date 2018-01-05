@@ -31,7 +31,7 @@ export class EmpleadosComponent {
   }
 
   ngOnInit(){
-    console.log(this.empleados);
+    //console.log(this.empleados);
   }
 
   cambiarTipoContrato(){

@@ -22,4 +22,12 @@ export class ContactoComponent {
       console.log(this.parametro);
     });
   }
+
+  redirigir(){
+    this._router.navigate(['/contacto','wilmarpulido']);
+  }
+
+  redirigir_inicio(){
+    this._router.navigate(['/home']);
+  }
 }

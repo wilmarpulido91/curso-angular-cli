@@ -5,3 +5,6 @@ input {
   color: #000;
   border: 1px solid #ccc;
 }
+.cont-botones {
+	margin-bottom: 20px;
+}

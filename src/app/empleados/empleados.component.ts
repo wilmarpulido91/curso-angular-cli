@@ -16,7 +16,7 @@ export class EmpleadosComponent {
 
   constructor(){
     this.titulo_component = 'Empleados';
-    this.color = 'green';
+    this.color = 'blue';
     this.color2 = 'black';
     this.color_select = '';
     this.empleados = [

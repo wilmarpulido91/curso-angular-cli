@@ -12,11 +12,17 @@ export class HomeComponent {
   public titulo_home:string;
   public listado_ropa:Array<string>;
   public prenda_add:string;
+  public fecha;
+  public texto_transform:string;
+  public numero_multiplica:number;
 
   constructor(
   	private _ropaService: RopaService
   ){
     this.titulo_home = "PAGINA PRINCIPAL";
+    this.fecha = new Date();
+    this.texto_transform = "HoLa MunDo";
+    this.numero_multiplica = 354;
   }
 
   ngOnInit(){

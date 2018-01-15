@@ -13,3 +13,11 @@
 <ul>
 	<li *ngFor="let ropa of listado_ropa; let i = index">{{ropa}} <button (click)="eliminarRopa(i)">Eliminar Ropa</button></li>
 </ul>
+
+<hr>
+
+{{fecha | date:'dd/MM/yyyy'}}<br><br>
+{{fecha | date:'fullDate'}}<br><br>
+{{texto_transform | uppercase}}<br><br>
+{{texto_transform | lowercase}}<br><br>
+{{numero_multiplica | multiplica: 2}}

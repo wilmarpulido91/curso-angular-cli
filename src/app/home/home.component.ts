@@ -15,6 +15,7 @@ export class HomeComponent {
   public fecha;
   public texto_transform:string;
   public numero_multiplica:number;
+  public subtitle:string;
 
   constructor(
   	private _ropaService: RopaService
@@ -23,6 +24,7 @@ export class HomeComponent {
     this.fecha = new Date();
     this.texto_transform = "HoLa MunDo";
     this.numero_multiplica = 354;
+    this.subtitle = "prueba de ramas";
   }
 
   ngOnInit(){

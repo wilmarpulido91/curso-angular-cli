@@ -19,7 +19,7 @@ export class HomeComponent {
   constructor(
   	private _ropaService: RopaService
   ){
-    this.titulo_home = "PAGINA PRINCIPAL";
+    this.titulo_home = "PAGINA PRINCIPAL TRABAJO";
     this.fecha = new Date();
     this.texto_transform = "HoLa MunDo";
     this.numero_multiplica = 354;

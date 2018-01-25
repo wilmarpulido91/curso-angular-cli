@@ -10,6 +10,8 @@ import { EmpleadosComponent } from './empleados/empleados.component';
 import { HomeComponent } from './home/home.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { MultiplicaPipe } from './pipes/conversor.pipe';
+import { CochesComponent } from './coches/coches.component';
+import { PlantillasComponent } from './plantillas/plantillas.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { MultiplicaPipe } from './pipes/conversor.pipe';
     EmpleadosComponent,
     HomeComponent,
     ContactoComponent,
-    MultiplicaPipe
+    MultiplicaPipe,
+    CochesComponent,
+    PlantillasComponent
   ],
   imports: [
     BrowserModule,

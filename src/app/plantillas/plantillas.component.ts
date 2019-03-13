@@ -37,7 +37,7 @@ export class PlantillasComponent {
 			let newLi = document.createElement('li');
 			let value = document.createTextNode(element.toString());
 			newLi.appendChild(value);
-			dato.append(newLi);
+			// dato.append(newLi);
 		});
 	}
 

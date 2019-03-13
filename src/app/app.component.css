@@ -1,3 +1,17 @@
-h2.titulo_angular {
-  text-align: left;
+/* You can add global styles to this file, and also import other style files */
+.menu-principal {
+  padding: 10px 0;
+  background-color: lightblue;
+}
+.menu-principal .link {
+  color: blue;
+  padding: 10px;
+  text-decoration: none;
+  border: 1px solid #fff;
+}
+.link-activo {
+  color: #fff !important;
+  font-weight: bold;
+  border: 1px solid lightblue !important;
+  background-color: blue;
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Empleado } from './empleado';
 
 @Component({
@@ -7,7 +7,7 @@ import { Empleado } from './empleado';
   styleUrls: ['./empleados.component.css']
 })
 
-export class EmpleadosComponent {
+export class EmpleadosComponent implements OnInit {
   public titulo_component:string;
   public color:string;
   public color2:string;
@@ -31,7 +31,7 @@ export class EmpleadosComponent {
   }
 
   ngOnInit(){
-    //console.log(this.empleados);
+    console.log('Componente Empleados');
   }
 
   cambiarTipoContrato(){

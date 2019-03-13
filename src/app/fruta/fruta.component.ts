@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'fruta',
@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls:  ['./fruta.component.css']
 })
 
-export class FrutaComponent{
+export class FrutaComponent implements OnInit {
   public nombre_componente = 'Componente de frutas';
   public listado_frutas = 'Naranja, Manzana, Pera, Piña';
 
@@ -28,8 +28,7 @@ export class FrutaComponent{
   ngOnInit(){
     this.cambiarNombre();
     this.cambiarEdad();
-    console.log(this.nombre);
-    console.log('En 40 años tendras: ' + this.edad + ' años');
+    console.log('Componente Frutas');
   }
 
   // Funcion o metodo en Angular 4

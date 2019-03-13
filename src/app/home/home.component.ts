@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RopaService } from '../services/ropa.service';
 
 @Component({
@@ -8,24 +8,27 @@ import { RopaService } from '../services/ropa.service';
   providers: [RopaService]
 })
 
-export class HomeComponent {
+export class HomeComponent implements OnInit {
   public titulo_home:string;
   public listado_ropa:Array<string>;
   public prenda_add:string;
-  public fecha;
+  public fecha:Date;
   public texto_transform:string;
   public numero_multiplica:number;
+  public subtitle:string;
 
   constructor(
   	private _ropaService: RopaService
   ){
-    this.titulo_home = "PAGINA PRINCIPAL";
+    this.titulo_home = "PAGINA HOME";
     this.fecha = new Date();
     this.texto_transform = "HoLa MunDo";
     this.numero_multiplica = 354;
+    this.subtitle = "prueba de ramas";
   }
 
   ngOnInit(){
+    console.log('Componente Home');
   	this.listado_ropa = this._ropaService.getRopa();
   }
 

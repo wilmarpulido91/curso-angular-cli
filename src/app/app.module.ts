@@ -1,36 +1,25 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { routing, appRoutingProviders } from './app.routing';
 
+// Componentes
 import { AppComponent } from './app.component';
-import { FrutaComponent } from './fruta/fruta.component';
-import { EmpleadosComponent } from './empleados/empleados.component';
-import { HomeComponent } from './home/home.component';
-import { ContactoComponent } from './contacto/contacto.component';
-import { MultiplicaPipe } from './pipes/conversor.pipe';
-import { CochesComponent } from './coches/coches.component';
-import { PlantillasComponent } from './plantillas/plantillas.component';
+import { AdminComponent } from './admin/admin.component';
+
+// Routing
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FrutaComponent,
-    EmpleadosComponent,
-    HomeComponent,
-    ContactoComponent,
-    MultiplicaPipe,
-    CochesComponent,
-    PlantillasComponent
+    AdminComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule,
     HttpModule,
-    routing
+    AppRoutingModule
   ],
-  providers: [appRoutingProviders],
+  providers: [],
   bootstrap: [AppComponent]
 })
 

@@ -1,0 +1,45 @@
+<h1>{{titulo_coches}}</h1>
+
+<form #miform="ngForm" (ngSubmit)="onSubmit(); miform.reset();">
+	<p>
+		<label>Marca:</label>
+		<input type="text" name="marca" #marca="ngModel" [(ngModel)]="coche.marca" pattern="[a-zA-Z#]+" required>
+		<span *ngIf="marca.touched && !marca.valid">
+			La marca no es valida!
+		</span>
+	</p>
+	<p>
+		<label>Modelo:</label>
+		<input type="text" name="modelo" #modelo="ngModel" [(ngModel)]="coche.modelo" required pattern="[0-9]+">
+		<span *ngIf="modelo.touched && !modelo.valid">
+			El modelo no es valido!
+		</span>
+	</p>
+	<p>
+		<label>Color:</label>
+		<input type="text" name="color" #color="ngModel" [(ngModel)]="coche.color" pattern="[0-9a-zA-Z#]+" required>
+		<span *ngIf="color.touched && !color.valid">
+			El color no es valido!
+		</span>
+	</p>	
+	<p>
+		<input type="submit" value="Guardar" [disabled]="!miform.form.valid">
+	</p>
+</form>
+<hr>
+<div>
+	<h4>Listado de coches</h4>
+	<ul>
+		<li *ngFor="let coche of coches">{{coche.marca}} - {{coche.modelo}} - {{coche.color}}</li>
+	</ul>	
+</div>
+<hr>
+<div *ngIf="articulos">
+	<h1>Listado de articulos</h1>
+	<div *ngFor="let articulo of articulos" [ngClass]="['cont-libro']">
+		<h3>{{articulo.title}}</h3>
+		<span><strong>Categoria:</strong> {{articulo.categories}}</span>
+		<p>{{articulo.teaser}}</p>
+	</div>	
+</div>
+<p *ngIf="!articulos">Cargando articulos...</p>

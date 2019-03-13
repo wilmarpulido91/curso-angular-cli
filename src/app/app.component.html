@@ -1,15 +1,10 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div>
-  <h2 class="titulo_angular">Aprendiendo {{title}}</h2>
-
-  <nav [ngClass]="['menu-principal']">
-    <a [ngClass]="['link']" [routerLink]="['/pagina-principal']" [routerLinkActive]="['link-activo']">Inicio</a>
-    <a [ngClass]="['link']" [routerLink]="['/empleado']" [routerLinkActive]="['link-activo']">Empleado</a>
-    <a [ngClass]="['link']" [routerLink]="['/fruta']" [routerLinkActive]="['link-activo']">Fruta</a>
-    <a [ngClass]="['link']" [routerLink]="['/contacto']" [routerLinkActive]="['link-activo']">Contacto</a>
-  </nav>
-  <!--<fruta></fruta>-->
-  <!--<home></home>-->
-  <!--<empleados></empleados>-->
-  <router-outlet></router-outlet>
-</div>
+<nav [ngClass]="['menu-principal']">
+  <a [ngClass]="['link']" [routerLink]="['/inicio']" [routerLinkActive]="['link-activo']">Inicio</a>
+  <a [ngClass]="['link']" [routerLink]="['/empleados']" [routerLinkActive]="['link-activo']">Empleado</a>
+  <a [ngClass]="['link']" [routerLink]="['/fruta']" [routerLinkActive]="['link-activo']">Fruta</a>
+  <a [ngClass]="['link']" [routerLink]="['/contacto']" [routerLinkActive]="['link-activo']">Contacto</a>
+  <a [ngClass]="['link']" [routerLink]="['/coches']" [routerLinkActive]="['link-activo']">Coches</a>
+  <a [ngClass]="['link']" [routerLink]="['/plantillas']" [routerLinkActive]="['link-activo']">Plantillas</a>
+</nav>
+<admin></admin>

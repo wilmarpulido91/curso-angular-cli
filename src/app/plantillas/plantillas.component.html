@@ -1,0 +1,29 @@
+<h1>{{titulo}}</h1>
+
+<div *ngIf="!admin then NoAdmin else Admin"></div>
+
+	<ng-template #Admin>
+		<button (click)="cambiar(false)">Cambiar</button>
+		<strong>Si eres el Admin de esta pagína</strong>
+	</ng-template>
+
+	<ng-template #NoAdmin>
+		<button (click)="cambiar(true)">Cambiar</button>
+		<strong>No eres el Admin de esta pagína</strong>
+	</ng-template>
+
+<hr>
+
+<h2>Trabajando con el decorador Input</h2>
+
+<componente-hijo [saludo]="nombre_externo" [nombre]="params" (enviarData)="recibirData($event)"></componente-hijo>
+
+<h2>Trabajando con el decorador Ouput</h2>
+
+<ul id="dato"></ul>
+
+<div class="data" *ngIf="data">
+	<p><strong>Nombre:</strong> {{data.nombre}}</p>
+	<p><strong>Cargo:</strong> {{data.cargo}}</p>
+	<p><strong>Estudio:</strong> {{data.estudio}}</p>
+</div>
